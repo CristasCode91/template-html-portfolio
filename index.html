@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Person - Web Developer based in Country specializing in fast, responsive and accessible web applications built with modern technologies.">
+    <title>Person | Web Developer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">P</span>
+                Person
+            </a>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </nav>
+
+            <button class="hamburger" id="hamburger">☰</button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="hero">
+        <div class="hero">
+            <div class="hero-text">
+                <h1>Hi, I’m Person — I build fast, clean web apps</h1>
+                <p>
+                    Front-end focused web developer based in Portugal, crafting responsive interfaces and full-stack
+                    solutions for startups and small businesses. I focus on performance, accessibility, and UX that
+                    actually converts users.
+                </p>
+                <a href="#projects" class="btn-primary">View My Work</a>
+            </div>
+
+            <div class="hero-image">
+                <img src="imgs/cube.webp" alt="Portrait illustration of Person">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- projects -->
+    <section id="projects">
+        <h2 class="text-center">Selected Work</h2>
+
+        <div class="grid">
+
+            <article class="card">
+                <div class="card-image">
+                    <img src="imgs/cube.webp" alt="E-commerce project preview">
+                </div>
+                <div class="card-content">
+                    <h3>Fashion E-commerce Platform</h3>
+                    <p>
+                        A responsive online store with product filtering, cart system, and optimized checkout flow
+                        focused on improving mobile conversion rates.
+                    </p>
+                    <a href="#projects" class="btn-primary">View My Work</a>
+
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-image">
+                    <img src="imgs/cube.webp" alt="E-commerce project preview">
+                </div>
+                <div class="card-content">
+                    <h3>Travel Journal Platform</h3>
+                    <p>
+                        SEO-optimized blogging platform with content management, social sharing, and structured metadata
+                        for better search visibility.
+                    </p>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-image">
+                    <img src="imgs/cube.webp" alt="E-commerce project preview">
+                </div>
+                <div class="card-content">
+                    <h3>Admin Dashboard System</h3>
+                    <p>
+                        Secure admin panel with authentication, role-based access, and analytics dashboard for managing
+                        users and content.
+                    </p>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-image">
+                    <img src="imgs/cube.webp" alt="E-commerce project preview">
+                </div>
+                <div class="card-content">
+                    <h3>Mobile Task Manager App</h3>
+                    <p>
+                        Cross-platform productivity app with offline support, task tracking, and real-time sync across
+                        devices.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+    <!-- About -->
+    <section id="about">
+        <h1 class="text-center">About Me</h1>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>Who I Am</h3>
+                <p>
+                    I’m Person, a web developer with 5+ years of experience building modern web applications.
+                    I specialize in crafting clean, scalable interfaces that balance design, performance, and usability.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Education & Growth</h3>
+                <ul>
+                    <li><strong>BSc Computer Science</strong> — University of Lisbon</li>
+                    <li><strong>Self-taught React & Node.js developer</strong> through real-world projects</li>
+                    <li><strong>Continuous learning</strong> in web performance, UX, and system design</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Tech Stack</h3>
+                <p>
+                    HTML5, CSS3, JavaScript (ES6+), React.js, Node.js, PHP, MySQL.
+                    Strong focus on SEO, responsive design, and performance optimization.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+
+            <div class="footer-section">
+                <h4>Person</h4>
+                <p>Web Developer based in Portugal building modern, scalable and performant web applications.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:person@example.com">person@example.com</a></li>
+                    <li><a href="tel:+351912345678">+351 insert_phone_here</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Social</h4>
+                <ul>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">GitHub</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <p style="text-align:center; margin-top:2rem; font-size:0.9rem;">
+            © <span id="copyright"></span>
+            <script>
+                document.getElementById('copyright')
+                    .appendChild(document.createTextNode(new Date().getFullYear()));
+            </script>
+            Person. Built with clean code and attention to detail.
+        </p>
+    </footer>
+
+    <script src="scripts/navbar.js"></script>
+</body>
+
+</html>

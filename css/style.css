@@ -1,0 +1,355 @@
+        /* Base Styles */
+        :root {
+            --primary-color: #1f2a37;
+            /* darker, more modern slate */
+            --secondary-color: #3b82f6;
+            /* modern blue */
+            --accent-color: #ef4444;
+            --light-gray: #f8f9fa;
+            --medium-gray: #e0e0e0;
+            --dark-gray: #6c757d;
+            --black: #1a1a1a;
+            --white: #ffffff;
+            --soft-white: rgba(255, 255, 255, 0.9);
+            --font-size-xl: 2.4rem;
+            --padding-sm: 1rem;
+            --padding-md: 2rem;
+            --max-width-px: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.8;
+            color: var(--black);
+            background-color: var(--light-gray);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Accessibility Focus Styles */
+        a:focus,
+        button:focus {
+            outline: 3px solid var(--secondary-color);
+            outline-offset: 2px;
+        }
+
+        h2 {
+            font-size: var(--font-size-xl);
+        }
+
+
+  /* Card */
+        .card {
+            /* Use Flexbox to manage the relationship between image and content */
+            display: flex;
+            flex-direction: column;
+            /* Default stack on mobile */
+            background-color: var(--soft-white);
+            border-radius: 1rem;
+            overflow: hidden;
+            border: var(--dark-gray) 1px solid;
+            padding: var(--padding-md);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* Smooth interaction */
+        }
+
+        /* Hover effect for visual feedback */
+        .card:hover {
+            transform: translateY(-5px);
+            /* Subtle lift */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            /* Soft shadow increase */
+        }
+
+
+     
+        .card-image {
+            /* Crucial: Define the aspect ratio and ensure it spans the full width of the card */
+            width: 100%;
+            /* Takes full available width */
+            height: 350px;
+            /* Fixed height for consistent design (adjust as needed) */
+            overflow: hidden;
+            /* Ensures nothing leaks out */
+        }
+
+        .card-image img {
+            /* Make the image fill the entire container and cover it */
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* This is key: prevents distortion and crops properly */
+            display: block;
+        }
+
+
+       
+
+        .card-content {
+            /* Use flex to manage the text block and button on one line */
+            display: flex;
+            flex-direction: column;
+            /* Default stack for mobile */
+            justify-content: space-between;
+            /* Pushes content up, button down (or vice versa) */
+            gap: var(--spacing-sm);
+            /* Space between text block and button/title group */
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+
+        /* Header */
+        header {
+            top: 0;
+            width: 100%;
+            background-color: var(--primary-color);
+            z-index: 1000;
+            padding: var(--padding-sm);
+            position: relative;
+        }
+
+        /* Header container */
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: var(--max-width-px);
+            margin: 0 auto;
+        }
+
+        /* Logo styling */
+        .logo {
+            color: var(--white);
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Hamburger icon */
+        .hamburger {
+            display: block;
+            cursor: pointer;
+            color: white;
+            font-size: 2rem;
+            padding: var(--padding-sm);
+            background: none;
+            border: none;
+            z-index: 1001;
+        }
+
+        /* Navigation (mobile first) */
+        .nav {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+
+            /* hidden by default */
+            transform: translateY(-10px);
+            opacity: 0;
+            pointer-events: none;
+
+            transition: all 0.3s ease;
+        }
+
+        /* Open state */
+        .nav.open {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Nav list */
+        .nav ul {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            gap: 1rem;
+            padding: var(--padding-md);
+        }
+
+        /* Links */
+        .nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            transition: opacity 0.3s ease, transform 0.2s ease;
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Hover effect */
+        .nav ul li a:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        /* Underline animation */
+        .nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav ul li a:hover::after {
+            width: 100%;
+        }
+
+       
+        /* Desktop styles */
+      
+        @media (min-width: 768px) {
+            .hamburger {
+                display: none;
+            }
+
+            .nav {
+                position: static;
+                transform: none;
+                opacity: 1;
+                pointer-events: auto;
+                width: auto;
+            }
+
+            .nav ul {
+                flex-direction: row;
+                gap: 2rem;
+                padding: 0;
+            }
+        }
+
+        /* Hero container */
+        .hero {
+            display: flex;
+            min-height: 50vh;
+            /* Minimum height for full viewport coverage */
+            align-items: center;
+            padding: 2rem;
+            max-width: var(--max-width-px);
+            margin: 0 auto;
+            gap: 2rem;
+        }
+
+        /* Text content area */
+        .hero-text {
+            flex: 1;
+            max-width: 500px;
+            /* Prevent text from overflowing on small screens */
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+
+        /* Image content area */
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .btn-primary {
+            background-color: var(--black);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2.5rem;
+            padding: 4rem;
+            max-width: var(--max-width-px);
+            margin: 0 auto;
+            background-color: var(--light-gray);
+        }
+
+
+        .skill-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--secondary-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+        }
+
+
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-content {
+            max-width: var(--max-width-px);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-section a:hover {
+            opacity: 1;
+        }
