@@ -1,3 +1,6 @@
+<img width="1018" height="3043" alt="portfolio-example" src="https://github.com/user-attachments/assets/5a2653ee-59fa-4342-8eb9-a603e815ee91" />
+
+
 # Web Fundamentals Portfolio Template.
 
 A clean, educational boilerplate designed for learning the basics of front-end development. This template is built using only HTML5 and base CSS (Flexbox/Grid), providing an ideal framework for understanding how real websites are assembled block by block. A JavaScript snippet for Navbar responsiveness is included, allowing you to progressively add interactivity as you master the fundamentals of web design!
