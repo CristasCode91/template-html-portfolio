@@ -1,4 +1,3 @@
-<img width="1018" height="3043" alt="portfolio-example" src="https://github.com/user-attachments/assets/5a2653ee-59fa-4342-8eb9-a603e815ee91" />
 
 
 # Web Fundamentals Portfolio Template.
