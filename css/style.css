@@ -45,7 +45,7 @@
         }
 
 
-  /* Card */
+        /* Card */
         .card {
             /* Use Flexbox to manage the relationship between image and content */
             display: flex;
@@ -69,7 +69,7 @@
         }
 
 
-     
+
         .card-image {
             /* Crucial: Define the aspect ratio and ensure it spans the full width of the card */
             width: 100%;
@@ -90,7 +90,7 @@
         }
 
 
-       
+
 
         .card-content {
             /* Use flex to manage the text block and button on one line */
@@ -156,8 +156,9 @@
             top: 100%;
             left: 0;
             width: 100%;
+            background-color: var(--primary-color);
+            z-index: 1000;
 
-            /* hidden by default */
             transform: translateY(-10px);
             opacity: 0;
             pointer-events: none;
@@ -212,9 +213,9 @@
             width: 100%;
         }
 
-       
+
         /* Desktop styles */
-      
+
         @media (min-width: 768px) {
             .hamburger {
                 display: none;
